@@ -56,6 +56,7 @@
     <script type="text/javascript" src="js/plugins/jquery.elfinder.js"></script>
 
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/navegation.js"></script>
  
     <!--
     <script type="text/javascript" src="js/charts/chart.js"></script>
@@ -65,7 +66,7 @@
 
 </head>
 
-<body>
+<body class="loading">
 
 <!-- Left side content -->
 <div id="leftSide">
@@ -239,9 +240,24 @@
     
     <div class="line"></div>
 
-    <!-- Main content wrapper -->
+    <!--- 
+        Main content wrapper --->
     <div class="wrapper" id="principalContent">
     </div>
+
+    <!--- 
+        Popup -Loader "Animacion de loader"
+    --->
+    <!---
+    <div class="uDialog">
+        <div id="dialog-message" title="Saving">
+            <br>
+            <p><center><img src="images/loaders/loader9.gif" alt="" style="margin: 5px;"></center></p>
+        </div>
+    </div>
+    --->
+
+
 
     <!-- Footer line -->
     <div id="footer">
@@ -249,6 +265,8 @@
     </div>
 
 </div>
+
+<div class="modal"></div>
 
 </body>
 </html>

@@ -1,0 +1,601 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"required=\"true\"	required"
+			],
+			[
+				"cfin",
+				"cfinvokeargument	Tag (cmfl)"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"cfca",
+				"cfcatch	Tag (cmfl)"
+			],
+			[
+				"r",
+				"returntype=\"Binary\"	returntype"
+			],
+			[
+				"cfd",
+				"cfdump	Tag (cmfl)"
+			],
+			[
+				"get",
+				"getClientQuery"
+			],
+			[
+				"clientFir",
+				"clientFirstName"
+			],
+			[
+				"cfqu",
+				"cfqueryparam	Tag (cmfl)"
+			],
+			[
+				"getUsSta",
+				"getUsStatesQuery"
+			],
+			[
+				"cfinvo",
+				"cfinvoke	Tag (cmfl)"
+			],
+			[
+				"ac",
+				"access=\"public\"	access"
+			],
+			[
+				"a",
+				"access=\"public\"	access"
+			],
+			[
+				"cli",
+				"clientCreationDate"
+			],
+			[
+				"tab",
+				"table"
+			],
+			[
+				"na",
+				"nameconflict=\"overwrite\"	nameconflict"
+			],
+			[
+				"archive",
+				"archive"
+			],
+			[
+				"archi",
+				"archiveFileName"
+			],
+			[
+				"fi",
+				"file"
+			],
+			[
+				"firs",
+				"firstName"
+			],
+			[
+				"idHis",
+				"idHistoryType"
+			],
+			[
+				"valu",
+				"value	@value"
+			],
+			[
+				"ty",
+				"type=\"checkbox\"	type"
+			],
+			[
+				"atto",
+				"attorneyFDInfo"
+			],
+			[
+				"user",
+				"userName"
+			],
+			[
+				"this",
+				"thisFileQuery"
+			],
+			[
+				"cfdo",
+				"cfdocumentitem	Tag (cmfl)"
+			],
+			[
+				"cfdu",
+				"cfdocument	Tag (cmfl)"
+			],
+			[
+				"repla",
+				"replace	fn. (cfscript)"
+			],
+			[
+				"fileName",
+				"fileNameAndPath"
+			],
+			[
+				"Atto",
+				"Attorney"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"im",
+				"img"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"echo",
+				"echosign"
+			],
+			[
+				"cfou",
+				"cfoutput	Tag (cmfl)"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"cfret",
+				"cfreturn	Tag (cmfl)"
+			],
+			[
+				"isDe",
+				"isDefined	fn. (cfscript)"
+			],
+			[
+				"IN",
+				"INTO"
+			],
+			[
+				"SE",
+				"SESSION"
+			],
+			[
+				"APP",
+				"APPLICATION"
+			],
+			[
+				"affiliate",
+				"affiliateCompanyId"
+			],
+			[
+				"listCo",
+				"listContains	fn. (cfscript)"
+			],
+			[
+				"cfloo",
+				"cfloop	Tag (cmfl)"
+			],
+			[
+				"ch",
+				"checked=\"true\"	checked"
+			],
+			[
+				"m",
+				"multiple=\"true\"	multiple"
+			],
+			[
+				"ftp",
+				"ftp"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"set Syntax: cf",
+				"Set Syntax: ColdFusion Component"
+			],
+			[
+				"set",
+				"Set Syntax: SQL"
+			],
+			[
+				"sy",
+				"Set Syntax: SQL"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jairobotero/Sites/fidelity/search.cfm",
+		"/Users/jairobotero/Sites/fidelity/fileEditForm.cfm",
+		"/Users/jairobotero/Sites/fidelity/components/file.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/search.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/affiliates.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/archive.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/archiveFD.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/history.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/historyFD.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/importantDates.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/legalMatters.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/letters.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/messages.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/payments.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/properties.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/task.cfc",
+		"/Users/jairobotero/Sites/fidelity/components/user.cfc",
+		"/Users/jairobotero/Sites/fidelity/index.cfm",
+		"/Users/jairobotero/Sites/fidelity/error.cfm",
+		"/Users/jairobotero/Sites/fidelity/components/login.cfc",
+		"/Users/jairobotero/Sites/fidelity/Application.cfm",
+		"/Users/jairobotero/Sites/fidelity/test.html",
+		"/Users/jairobotero/Sites/fidelity/test1.cfm",
+		"/Users/jairobotero/Sites/fidelity/test.cfm",
+		"/Users/jairobotero/Documents/nyxent/choosegreenergrass/contact_us.html",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/theme/form_wizards.html",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/js/plugins/wizard/jquery.validate.min.js",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/theme/form_validation.html",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/Application.cfm",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/theme/ui_elements.html",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/content/dashboard.cfm",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/components/client.cfc",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/components/usStates.cfc",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/index.cfm",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/index.html",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/css/main.css",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/js/custom.js",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/theme/table_dynamic.html",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/error.cfm",
+		"/Users/jairobotero/Documents/nyxent/CRMLex/www/sftp-config.json",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/searchCustomerService.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/search.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/search.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/login.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/headerFileInf.cfm",
+		"/Users/jairobotero/Downloads/Karma-Wordpress-Theme-Package/1. Demo Content/karma-wordpress.xml",
+		"/Users/jairobotero/Downloads/property.csv",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/temp/final exportation.sql",
+		"/Users/jairobotero/Downloads/file.csv",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/sftp-config.json",
+		"/Users/jairobotero/Downloads/total list adjusted1-18-13.csv",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/history.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/fd/db/creditde_fidelity.sql",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/Application.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/error.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/file.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/fileAddForm.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/archive.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/user.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/contactClient.cfc",
+		"/Users/jairobotero/Documents/BK-Server/2012-12-16/Nyxent/files/vanillaonyou/www/lib/Zend/Locale/Data/et.xml",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/fd.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/historyFDForm.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/temp/repAllClients.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/template/footer.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/template/css/style.css",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/template/header.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/searchUnderwriting.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/searchAttorneyManager.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/searchAttorneyFD.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/searchAttorney.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/searchAdminProcess.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/components/task.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-fidelity/www/temp/oldFD_to_newFD.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/ForclosureDeclaration-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/ACHdoc-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/properties.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/Deed_of_Trust_for_Land_Trust-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/Land_Trust_Agreement_CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/Terms_of_Service_CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/Disclosure_Addendum_to_LTA_-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/BenificiaryClientRights-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/AgreementToProtectAndDefend-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/7NCNDA-CRMupload.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/generateDocuments.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/documents.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/Land_Trust_Summary_Disclosure_Sheet_updated-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/fileAdditionalInfo.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/file.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/PromissoryNote-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/Conflict_Waiver-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/DISCLAIMER-CRM.htm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/login.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/archive.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/template/footer.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/menuDocuments.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/fileEditForm.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/Application.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/generateLetters.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/letters.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/template/header.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/task.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/search.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/user.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/flowControl.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/sftp-config.json",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/searchAttorney.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/searchAttorneyManager.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/searchCustomerService.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/searchUnderwriting.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/searchAdminProcess.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/search.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/template/css/style.css",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/fileAddForm.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/intake.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/pt.sublime-project",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/components/googleCalAdmin.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/components/importantDates.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/components/file.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/archive/682/localhost.sql",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/components/login.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/components/search.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/headerFileInf.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/pt.sublime-project",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/temp/deleteFile.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/fileAddForm.cfm",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/components/properties.cfc",
+		"/Users/jairobotero/Documents/nyxent/credit-defender/prometheus/www/search.cfm"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"clear",
+			"invoke",
+			"google",
+			"src=\"/template",
+			"menu-side-bar-navigation",
+			"<img class=\"awardsTable\">",
+			"<img class=\"awardsTable\" ",
+			"<td>",
+			"<img",
+			"#validate",
+			"emailValid",
+			"novalidate",
+			"wizard2",
+			"usualValidate",
+			"wiz",
+			"Please enter a valid email address.",
+			"validate",
+			"dialog-message",
+			"dialo",
+			"ARGUEMNTS",
+			"date",
+			".client.client",
+			"href=\"#\"",
+			"oTable",
+			"table",
+			"uniform",
+			"dTable",
+			"display dTable",
+			"gradeA",
+			", ",
+			"`",
+			" `",
+			"cflock",
+			"delete",
+			"addNote",
+			"preSearch",
+			"searchedWordHeader",
+			"idFileClient",
+			"uploadFileLoaderWindow",
+			"cfwindo",
+			"{{(Yes)",
+			"__ __",
+			"under",
+			"trust",
+			"getTaskById",
+			"filePriority",
+			"getAllUser",
+			"ExpandPath",
+			"file.followUp,",
+			"fidelity",
+			"userId",
+			"create",
+			"new",
+			"button",
+			"checkAccountForTemplate",
+			"REQUEST_METHOD",
+			"$_GET",
+			"filelog",
+			"FileLog",
+			"File",
+			"searchedWord",
+			"searchWindow",
+			"fileEditForm.cfm",
+			"button",
+			"meracordBilling",
+			"\"FD\"",
+			"85",
+			"`",
+			"idFileClient",
+			"onlyUnderwriting",
+			"affiliate",
+			"adminGridDiv",
+			"searchAdminProcessGrid.cfm",
+			"file.affiliateCompanyId IN (#SESSION.userAffiliatePermisions#)",
+			"uwmbs",
+			"clear",
+			"employee",
+			"assignedToAffiliate",
+			"affiliateCompanyId",
+			"assignedToAffiliate",
+			"affiliatecompanyemployee",
+			"addNewFile",
+			"all files addNewFile",
+			"addNewFile()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"src=\"template",
+			"menu-login-menu",
+			"<td class=\"awardsTable\">",
+			"<img",
+			"<img class=\"awardsTable\">",
+			"<img class=\"awardsTable\"",
+			"FORM",
+			".client.scClient",
+			"href=\"\"",
+			"\";\"",
+			"",
+			" `legalMatter.",
+			" `underwriting.",
+			" `property.",
+			" `file.",
+			"{{_es_:signer1:initials}}",
+			"DATE_FORMAT(file.followUp,'%m/%d/%Y') AS followUpDate,",
+			"$_POST",
+			"",
+			"(file.affiliateCompanyId IN (#SESSION.userAffiliatePermisions#) OR file.affiliateCompanyId = '')"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 199.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"dev",
+				"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/dev-pt.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true
+}

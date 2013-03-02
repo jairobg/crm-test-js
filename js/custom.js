@@ -893,6 +893,18 @@ function appStart() {
 	fPrincipalContent("dashboard");
 
 
+
+	//==== Loading Page ====//
+
+	$("body").on({
+	    ajaxStart: function() { 
+	        $(this).addClass("loading"); 
+	    },
+	    ajaxStop: function() { 
+	        $(this).removeClass("loading"); 
+	    }    
+	});
+
 };
 
 function selectLeftMenu()
@@ -901,42 +913,15 @@ function selectLeftMenu()
 	$(this).addClass("active");
 }
 
-function fPrincipalContent(goTo)
-{
-	switch(goTo)
-	{
-		case 'dashboard':
-			$("#principalContent").load("/content/dashboard.cfm", rechargeJqueryFunctions);
-			break;
-
-		case 'client':
-			$("#principalContent").load("/content/client.cfm", rechargeJqueryFunctions);
-			break;
-
-		case 'legalMatters':
-			$("#principalContent").load("/content/legalMatters.html", rechargeJqueryFunctions);
-			break;
 
 
-		case 'activities':
-			$("#principalContent").load("/content/activities.html", rechargeJqueryFunctions);
-			break;
-
-		case 'notes':
-			$("#principalContent").load("/content/notes.html", rechargeJqueryFunctions);
-			break;
-
-		case 'properties':
-			$("#principalContent").load("/content/properties.html", rechargeJqueryFunctions);
-			break;
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////Contenido modificado del archivo Original//////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-		default:
-			$("#principalContent").load("/content/dashboard.cfm", rechargeJqueryFunctions);
-
-	}
-
-}
 
 function rechargeJqueryFunctions()
 {
@@ -975,13 +960,36 @@ function rechargeJqueryFunctions()
 	$( "#dialog-message" ).dialog({
 		autoOpen: false,
 		modal: true,
-		//buttons: {
-		//	Ok: function() {
-		//		$( this ).dialog( "close" );
-		//	}
-		//}
+		buttons: {
+			Ok: function() {
+				$( this ).dialog( "close" );
+			}
+		}
 	});
 
+
+	// Note Delete Confirmation
+	$( "#noteDeleteConfirm" ).dialog({
+		autoOpen: false,
+		modal: true,
+		buttons: {
+			Ok: function() {
+				// Borra la nota
+				var noteId = $("#noteToDelete").val();
+				var clientId = $("#noteClientIdToDelete").val();
+				$.ajax({
+					url: "/components/notes.cfc?method=noteDelete",
+					data: {noteId:noteId},
+					complete: noteLoadGrid(clientId),
+					});
+				//Cierra el dialogo
+				$( this ).dialog( "close" );
+			},
+			Cancel: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	});
 
 
 	//===== Validation engine =====//
@@ -1011,19 +1019,17 @@ function rechargeJqueryFunctions()
 	// Reload Uniform
 	$("select, input:checkbox, input:radio, input:file, table").uniform();
 
-}
-
-
-
-function getClient(clientId)
-{
-
-	$.ajax({
-		url: "/components/client.cfc?method=getClient",
-		data: {clientId:clientId},
-
+	$("body").on({
+	    ajaxStart: function() { 
+	        $(this).addClass("loading"); 
+	    },
+	    ajaxStop: function() { 
+	        $(this).removeClass("loading"); 
+	    }    
 	});
+
 }
+
 
 
 function loadingOpener()
@@ -1036,9 +1042,4 @@ function loadingCloser()
 	$( "#dialog-message" ).dialog( "close" );
 }	
 
-function validateForms()
-{
-	alert("entra primera linea");
-	$("#clientForm").validationEngine();
-	alert("entra segunda linea");
-}
+

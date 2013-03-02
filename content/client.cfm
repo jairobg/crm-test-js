@@ -1,8 +1,14 @@
-<cfinvoke component="components.usStates" method="getUsStates" returnvariable="usStates" />
+<cfinvoke component="components.usStates" method="usStatesGet" returnvariable="usStates" />
+<cfinvoke component="components.clients" method="clientGet" returnvariable="thisClient">
+    <cfinvokeargument name="clientId" value="#URL.clientId#" />
+</cfinvoke>
 
 <cfoutput>
-<form class="form formToValidate" action="client.cfm" id="clientForm">
-	<fieldset>
+<form class="form formToValidate" action="" id="clientEditForm">
+
+    <input name="clientId" type="hidden" value="#thisClient.clientId#">
+	
+    <fieldset>
 		<div class="widget">
 
 			<div class="title">
@@ -18,21 +24,21 @@
                             name="clientFirstName" 
                             placeholder="First Name" 
                             type="text" 
-                            value="#SESSION.client.client.clientFirstName#" />
+                            value="#thisClient.clientFirstName#" />
                     </span>
                     <span class="span2">
                         <input 
                             name="clientMiddleName" 
                             placeholder="Middle Name" 
                             type="text" 
-                            value="#SESSION.client.client.clientMiddleName#" />
+                            value="#thisClient.clientMiddleName#" />
                     </span>
                     <span class="span5">
                         <input 
                             name="clientLastName" 
                             placeholder="Last Name" 
                             type="text" 
-                            value="#SESSION.client.client.clientLastName#" />
+                            value="#thisClient.clientLastName#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -42,7 +48,7 @@
                             name="clientHomePhone" 
                             placeholder="Home phone" 
                             type="text" 
-                            value="#SESSION.client.client.clientHomePhone#" />
+                            value="#thisClient.clientHomePhone#" />
                         <span class="formNote">(999) 999-9999</span>
                     </span>
                     <span class="span4">
@@ -51,7 +57,7 @@
                             name="clientBusinessPhone" 
                             placeholder="Business phone" 
                             type="text" 
-                            value="#SESSION.client.client.clientBusinessPhone#" />
+                            value="#thisClient.clientBusinessPhone#" />
                         <span class="formNote">(999) 999-9999</span>
                     </span>
                     <span class="span4">
@@ -60,7 +66,7 @@
                             name="clientCellPhone" 
                             placeholder="Cell phone" 
                             type="text" 
-                            value="#SESSION.client.client.clientCellPhone#" />
+                            value="#thisClient.clientCellPhone#" />
                         <span class="formNote">(999) 999-9999</span>
                     </span>
                 </div>
@@ -72,7 +78,7 @@
                             name="clientEmail" 
                             placeholder="E-mail" 
                             type="text" 
-                            value="#SESSION.client.client.clientEmail#" />
+                            value="#thisClient.clientEmail#" />
                     </span>
                     <span class="span4">
                         <input 
@@ -80,14 +86,14 @@
                             name="clientDateBirth" 
                             placeholder="Date birth" 
                             type="text" 
-                            value="#SESSION.client.client.clientDateBirth#" />
+                            value="#thisClient.clientDateBirth#" />
                     </span>
                     <span class="span4">
                         <input 
                             name="clientSocialSecurity" 
                             placeholder="Social Security" 
                             type="text" 
-                            value="#SESSION.client.client.clientSocialSecurity#" />
+                            value="#thisClient.clientSocialSecurity#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -96,21 +102,21 @@
                             type="text" 
                             placeholder="Address" 
                             name="clientAddress" 
-                            value="#SESSION.client.client.clientAddress#" />
+                            value="#thisClient.clientAddress#" />
                     </span>
                     <span class="span2">
                         <input 
                             name="clientCity" 
                             placeholder="City" 
                             type="text" 
-                            value="#SESSION.client.client.clientCity#" />
+                            value="#thisClient.clientCity#" />
                     </span>
                     <span class="span4">
 						<select name="clientUsState"> 
 							<option value="" selected="selected">Select a State</option> 
 							<cfloop query="usStates">
 								<option 
-                                    <cfif SESSION.client.client.clientUsState EQ usStates.abbreviation>
+                                    <cfif thisClient.clientUsState EQ usStates.abbreviation>
                                         selected="selected"
                                      </cfif>
                                     value="#usStates.abbreviation#">
@@ -124,7 +130,7 @@
                             name="clientZip" 
                             placeholder="Zip" 
                             type="text" 
-                            value="#SESSION.client.client.clientZip#" />
+                            value="#thisClient.clientZip#" />
                     </span>
                 </div>
             </div>
@@ -138,21 +144,21 @@
                             name="scClientFirstName" 
                             placeholder="First Name" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientFirstName#" />
+                            value="#thisClient.scClientFirstName#" />
                     </span>
                     <span class="span2">
                         <input 
                             name="scClientMiddleName" 
                             placeholder="Middle Name" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientMiddleName#" />
+                            value="#thisClient.scClientMiddleName#" />
                     </span>
                     <span class="span5">
                         <input 
                             name="scClientLastName" 
                             placeholder="Last Name" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientLastName#" />
+                            value="#thisClient.scClientLastName#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -161,21 +167,21 @@
                             name="scClientHomePhone" 
                             placeholder="Home phone" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientHomePhone#" />
+                            value="#thisClient.scClientHomePhone#" />
                     </span>
                     <span class="span4">
                         <input 
                             name="scClientBusinessPhone" 
                             placeholder="Business phone" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientBusinessPhone#" />
+                            value="#thisClient.scClientBusinessPhone#" />
                     </span>
                     <span class="span4">
                         <input 
                             name="scClientCellPhone" 
                             placeholder="Cell phone" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientCellPhone#" />
+                            value="#thisClient.scClientCellPhone#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -184,7 +190,7 @@
                             name="scClientEmail" 
                             placeholder="E-mail" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientEmail#" />
+                            value="#thisClient.scClientEmail#" />
                     </span>
                     <span class="span4">
                         <input 
@@ -192,14 +198,14 @@
                             name="scClientDateBirth" 
                             placeholder="Date birth" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientDateBirth#" />
+                            value="#thisClient.scClientDateBirth#" />
                     </span>
                     <span class="span4">
                         <input 
                             name="scClientSocialSecurity" 
                             placeholder="Social Security" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientSocialSecurity#" />
+                            value="#thisClient.scClientSocialSecurity#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -208,21 +214,21 @@
                             name="scClientAddress" 
                             placeholder="Address" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientAddress#" />
+                            value="#thisClient.scClientAddress#" />
                     </span>
                     <span class="span2">
                         <input 
                             name="scClientCity" 
                             placeholder="City" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientCity#" />
+                            value="#thisClient.scClientCity#" />
                     </span>
                     <span class="span4">
 						<select name="scClientUsState"> 
 							<option value="" selected="selected">Select a State</option> 
 							<cfloop query="usStates">
 								<option 
-                                    <cfif SESSION.client.scClient.scClientUsState EQ usStates.abbreviation> 
+                                    <cfif thisClient.scClientUsState EQ usStates.abbreviation> 
                                         selected="selected"
                                     </cfif>
                                     value="#usStates.abbreviation#">
@@ -236,38 +242,15 @@
                             name="scClientZip" 
                             placeholder="Zip" 
                             type="text" 
-                            value="#SESSION.client.scClient.scClientZip#" />
+                            value="#thisClient.scClientZip#" />
                     </span>
                 </div>
+            </div>
+            <div class="formSubmit">
+                <input type="submit" value="Save" class="redB" onClick="clientEdit(); return false;" />
             </div>
         </div>
     </fieldset>
 </form>
 
-<fieldset>
-	<div class="widget">
-        <!---
-        <a href="javaScript:validateForms();loadingOpener();ColdFusion.Ajax.submitForm('clientForm','/components/client.cfc?method=saveClient',loadingCloser);" title="" class="button redB" style="margin: 5px;">
-            <span>Save changes</span>
-        </a>
-        --->
-        <a href="javaScript:validateForms();" title="" class="button redB" style="margin: 5px;">
-            <span>Save changes</span>
-        </a>
-	</div>
-</fieldset>
-
 </cfoutput>
-
-
-<!---
-    Loader
---->
-<div class="uDialog">
-    <div id="dialog-message" title="Saving">
-    	<br>
-        <p><center><img src="images/loaders/loader9.gif" alt="" style="margin: 5px;"></center></p>
-    </div>
-</div>
-
-<cfdump var="#SESSION#">

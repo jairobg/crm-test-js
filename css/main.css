@@ -2223,3 +2223,33 @@ color: #656565;
 	.searchWidget input[type="text"] { width: 92%!important; }
 	
 }
+
+
+/*  CRM Lex Personalization */
+
+.modal {
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../images/loaders/loader9.gif') 
+                50% 50% 
+                no-repeat;
+    display:    none;
+    height:     100%;
+    left:       0;
+    position:   fixed;
+    top:        0;
+    width:      100%;
+    z-index:    1000;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+

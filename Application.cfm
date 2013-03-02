@@ -5,9 +5,9 @@
 
 <cfset APPLICATION.db = "crmlex">
 
-<cfset APPLICATION.website_url = "http://crmlex.credit-defender.com">
+<cfset APPLICATION.website_url = "http://local.crmlex.com">
 <cfset APPLICATION.template_path = "#application.website_url#/template/">
-<cfset APPLICATION.localPath = "D:\home\credit-defender.com\wwwroot\crmlex">
+<cfset APPLICATION.localPath = "/Users/jairobotero/Sites/crmlex">
 <cfset APPLICATION.codeAlgorithm = "CFMX_COMPAT">
 <cfset APPLICATION.codeEncoding = "UU">
 <cfset APPLICATION.codeKey = "CRMLEX">
