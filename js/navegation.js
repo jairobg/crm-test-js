@@ -39,7 +39,6 @@ function fPrincipalContent(goTo)
 
 }
 
-
 // ------------------------------------------------------------------------------
 // Clients
 
@@ -66,19 +65,25 @@ function clientSelect(clientId)
 
 function noteLoadGrid(clientId)
 {
-	$("#noteGrid").load("content/notesGrid.cfm?clientId="+clientId+"", rechargeJqueryFunctions);
+	$("#noteGrid").load("content/notesGrid.cfm?clientId="+clientId+"&&uid="+uniqueId(), rechargeJqueryFunctions);
+	// noteLoadGridAjaxParams = {
+	// 	cache: false
+	// }
+	// $.Ajax("content/notesGrid.cfm?clientId="+clientId+"",)
 }
 
 function noteAdd(clientId)
 {
 	if($("#noteAddForm").validationEngine('validate'))
 	{
-		ColdFusion.Ajax.submitForm('noteAddForm','/components/notes.cfc?method=noteAdd',noteLoadGrid(clientId));
+		ColdFusion.Ajax.submitForm('noteAddForm','/components/notes.cfc?method=noteAdd');
     }
 	//Recarga new note para el formulario
 	$("#noteForm").load("content/notesAdd.cfm?clientId="+clientId+"");
 	// Scrool hasta el grid
 	$('html,body').animate({scrollTop: $('#noteGrid').offset().top}, 500);
+	//Recarga el grid
+	noteLoadGrid(clientId);
 }
 
 function noteToEdit(noteId)
@@ -113,5 +118,6 @@ function noteDelete(noteId,clientId,noteTitle)
 
 	$("#noteDeleteConfirm").html(htmlNoteDelete);
 
+	//Abre el cuadro del dialogo y el borrado en la db se llama desde alla
 	$("#noteDeleteConfirm").dialog("open");
 }

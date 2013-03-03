@@ -8,6 +8,10 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <!---
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    --->
 
     <script type="text/javascript" src="js/plugins/spinner/jquery.mousewheel.js"></script>
 
@@ -54,7 +58,7 @@
 
     <script type="text/javascript" src="js/plugins/jquery.fullcalendar.js"></script>
     <script type="text/javascript" src="js/plugins/jquery.elfinder.js"></script>
-
+    
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/navegation.js"></script>
  
@@ -265,8 +269,6 @@
     </div>
 
 </div>
-
-<div class="modal"></div>
 
 </body>
 </html>

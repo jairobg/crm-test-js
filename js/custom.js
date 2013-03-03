@@ -892,19 +892,6 @@ function appStart() {
 	//===== Select dashboard page on load =====//
 	fPrincipalContent("dashboard");
 
-
-
-	//==== Loading Page ====//
-
-	$("body").on({
-	    ajaxStart: function() { 
-	        $(this).addClass("loading"); 
-	    },
-	    ajaxStop: function() { 
-	        $(this).removeClass("loading"); 
-	    }    
-	});
-
 };
 
 function selectLeftMenu()
@@ -977,13 +964,13 @@ function rechargeJqueryFunctions()
 				// Borra la nota
 				var noteId = $("#noteToDelete").val();
 				var clientId = $("#noteClientIdToDelete").val();
-				$.ajax({
-					url: "/components/notes.cfc?method=noteDelete",
-					data: {noteId:noteId},
-					complete: noteLoadGrid(clientId),
-					});
+				$.post("/components/notes.cfc?method=noteDelete", {noteId:noteId});
+
 				//Cierra el dialogo
 				$( this ).dialog( "close" );
+
+				//Recarga el grid
+				noteLoadGrid(clientId);
 			},
 			Cancel: function() {
 				$( this ).dialog( "close" );
@@ -1019,18 +1006,7 @@ function rechargeJqueryFunctions()
 	// Reload Uniform
 	$("select, input:checkbox, input:radio, input:file, table").uniform();
 
-	$("body").on({
-	    ajaxStart: function() { 
-	        $(this).addClass("loading"); 
-	    },
-	    ajaxStop: function() { 
-	        $(this).removeClass("loading"); 
-	    }    
-	});
-
 }
-
-
 
 function loadingOpener()
 {	
@@ -1042,4 +1018,7 @@ function loadingCloser()
 	$( "#dialog-message" ).dialog( "close" );
 }	
 
-
+function uniqueId()
+{
+	return new Date.getTime();
+}
