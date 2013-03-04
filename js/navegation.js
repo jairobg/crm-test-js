@@ -3,37 +3,38 @@
 
 function fPrincipalContent(goTo)
 {
-	var clientId = localStorage.getItem('clientId');
 
+	var clientId = localStorage.getItem('clientId');
+	
 	switch(goTo)
 	{
 		case 'dashboard':
-			$("#principalContent").load("content/dashboard.cfm", rechargeJqueryFunctions);
+			$("#principalContent").load("content/dashboard.cfm", appStart);
 			break;
 
 		case 'client':
-			$("#principalContent").load("content/client.cfm?clientId="+clientId+"", rechargeJqueryFunctions);
+			$("#principalContent").load("content/client.cfm?clientId="+clientId, appStart);
 			break;
 
 		case 'legalMatters':
-			$("#principalContent").load("content/legalMatters.html", rechargeJqueryFunctions);
+			$("#principalContent").load("content/legalMatters.html");
 			break;
 
 		case 'activities':
-			$("#principalContent").load("content/activities.html", rechargeJqueryFunctions);
+			$("#principalContent").load("content/activities.html");
 			break;
 
 		case 'notes':
-			$("#principalContent").load("content/notes.cfm?clientId="+clientId+"", rechargeJqueryFunctions);
+			$("#principalContent").load("content/notes.cfm?clientId="+clientId, appStart);
 			break;
 
 		case 'properties':
-			$("#principalContent").load("content/properties.html", rechargeJqueryFunctions);
+			$("#principalContent").load("content/properties.html");
 			break;
 
 
 		default:
-			$("#principalContent").load("content/dashboard.cfm", rechargeJqueryFunctions);
+			$("#principalContent").load("content/dashboard.cfm");
 
 	}
 
@@ -55,7 +56,7 @@ function clientSelect(clientId)
 {
 	localStorage.clear();
 	localStorage.setItem('clientId', clientId);
-
+	
 	fPrincipalContent('client');
 }
 
@@ -65,11 +66,7 @@ function clientSelect(clientId)
 
 function noteLoadGrid(clientId)
 {
-	$("#noteGrid").load("content/notesGrid.cfm?clientId="+clientId+"&&uid="+uniqueId(), rechargeJqueryFunctions);
-	// noteLoadGridAjaxParams = {
-	// 	cache: false
-	// }
-	// $.Ajax("content/notesGrid.cfm?clientId="+clientId+"",)
+	$("#noteGrid").load("content/notesGrid.cfm?clientId="+clientId, appStart);
 }
 
 function noteAdd(clientId)
@@ -79,7 +76,7 @@ function noteAdd(clientId)
 		ColdFusion.Ajax.submitForm('noteAddForm','/components/notes.cfc?method=noteAdd');
     }
 	//Recarga new note para el formulario
-	$("#noteForm").load("content/notesAdd.cfm?clientId="+clientId+"");
+	$("#noteForm").load("content/notesAdd.cfm?clientId="+clientId);
 	// Scrool hasta el grid
 	$('html,body').animate({scrollTop: $('#noteGrid').offset().top}, 500);
 	//Recarga el grid
@@ -88,7 +85,7 @@ function noteAdd(clientId)
 
 function noteToEdit(noteId)
 {
-	$("#noteForm").load("content/notesEdit.cfm?noteId="+noteId+"");
+	$("#noteForm").load("content/notesEdit.cfm?noteId="+noteId);
 	$('html,body').animate({scrollTop: $('#noteForm').offset().top}, 500);
 }
 
@@ -103,7 +100,7 @@ function noteEdit(clientId)
 	// Scrool hasta el grid
 	$('html,body').animate({scrollTop: $('#noteGrid').offset().top}, 500);
 	//Recarga new note para el formulario
-	$("#noteForm").load("content/notesAdd.cfm?clientId="+clientId+"");
+	$("#noteForm").load("content/notesAdd.cfm?clientId="+clientId);
 
 }
 

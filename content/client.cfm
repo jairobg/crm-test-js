@@ -4,7 +4,7 @@
 </cfinvoke>
 
 <cfoutput>
-<form class="form formToValidate" action="" id="clientEditForm">
+<form class="form" action="" id="clientEditForm">
 
     <input name="clientId" type="hidden" value="#thisClient.clientId#">
 	

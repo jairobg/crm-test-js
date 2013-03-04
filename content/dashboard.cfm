@@ -26,8 +26,18 @@
 				<td>#clientLastName#</td>
 				<td class="center">#dateFormat(clientCreationDate, "dd-mmm-yyyy")#</td>
 				<td class="actBtns">
-					<a href="javaScript:clientSelect(#clientId#);" title="Update" class="tipS"><img src="images/icons/edit.png" alt="" /></a>
-					<a href="" title="Remove" class="tipS"><img src="images/icons/remove.png" alt="" /></a>
+					<a 
+						class="tipS"
+						href="javaScript:clientSelect(#clientId#);" 
+						title="Update"> 
+						<img src="images/icons/edit.png" alt="" />
+					</a>
+					<a 
+						class="tipS"
+						href="" 
+						title="Remove"> 
+						<img src="images/icons/remove.png" alt="" />
+					</a>
 				</td>
 			</tr>
 			</cfoutput>

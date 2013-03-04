@@ -6,13 +6,30 @@
     <title>CRM - Lex</title>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
     <!---
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
     --->
 
+    <script src="js/plugins/forms/jquery.uniform.js"></script>
+    <script src="js/plugins/forms/jquery.validationEngine-en.js"></script>
+    <script src="js/plugins/forms/jquery.validationEngine.js"></script>
+    <script src="js/plugins/forms/jquery.maskedinput.min.js"></script>
+    <script src="js/plugins/forms/chosen.jquery.min.js"></script>
+
+    <script src="js/plugins/tables/jquery.dataTables.min.js"></script>
+
+    <script src="js/plugins/uploader/plupload.js"></script>
+    <script src="js/plugins/uploader/plupload.html5.js"></script>
+    <script src="js/plugins/uploader/plupload.html4.js"></script>
+    <script src="js/plugins/uploader/jquery.plupload.queue.js"></script>    
+
+    <script src="js/functions.js"></script>
+    <script src="js/navegation.js"></script>
+<!---
     <script type="text/javascript" src="js/plugins/spinner/jquery.mousewheel.js"></script>
 
     <script type="text/javascript" src="js/plugins/charts/excanvas.min.js"></script>
@@ -61,10 +78,9 @@
     
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/navegation.js"></script>
- 
-    <!--
+
     <script type="text/javascript" src="js/charts/chart.js"></script>
-    -->
+    --->
 
     <cfajaximport />
 
@@ -247,6 +263,7 @@
     <!--- 
         Main content wrapper --->
     <div class="wrapper" id="principalContent">
+        <cfinclude template="content/dashboard.cfm" />
     </div>
 
     <!--- 
