@@ -9,6 +9,7 @@ function fPrincipalContent(goTo)
 	switch(goTo)
 	{
 		case 'dashboard':
+			hideLeftBar();
 			$("#principalContent").load("content/dashboard.cfm", appStart);
 			break;
 
@@ -41,6 +42,28 @@ function fPrincipalContent(goTo)
 }
 
 
+
+function showLeftBar()
+{
+	$("#leftSide").css({
+		display: "block"
+	})
+	$("body").css({
+		background: "url(../images/backgrounds/bodyBg.png) repeat-y 0 0"
+	})
+}
+
+
+function hideLeftBar()
+{
+	$("#leftSide").css({
+		display: "none"
+	})
+	$("body").css({
+		background: "none"
+	})
+}
+
 // ------------------------------------------------------------------------------
 // Clients
 
@@ -55,6 +78,8 @@ function clientEdit()
 
 function clientSelect(clientId)
 {
+	showLeftBar();
+
 	localStorage.clear();
 	localStorage.setItem('clientId', clientId);
 	

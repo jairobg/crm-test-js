@@ -197,9 +197,11 @@
     <!--- 
         Main content wrapper --->
     <div class="wrapper" id="principalContent">
-        <cfinclude template="content/dashboard.cfm" />
     </div>
 
+    <script>
+        fPrincipalContent('dashboard');
+    </script>
     <!--- 
         Popup -Loader "Animacion de loader"
     --->
