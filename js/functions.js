@@ -3,32 +3,6 @@ $(document).on("ready", appStart);
 function appStart () {
 
 
-	/* Forms
-	================================================== 
-	================================================== */
-
-
-	// Dates
-	$( ".datepicker" ).datepicker({ 
-		defaultDate: +7,
-		autoSize: true,
-		appendText: '(dd-mm-yyyy)',
-		dateFormat: 'dd-mm-yy',
-	});	
-
-	//===== Masked input =====//
-	
-	//$.mask.definitions['~'] = "[+-]";
-	$(".maskPhone").mask("(999) 999-9999");
-
-
-	// Reload Uniform que no lo toma O_o
-	$("select, input:checkbox, input:radio, input:file").uniform();
-
-	// Style everything
-	//$("select, input").uniform();
-
-
 	/* Menus and drop-downs
 	================================================== 
 	================================================== */
@@ -170,9 +144,27 @@ function appStart () {
 	
 
 
-	/* Unsorted functions
+	/* Forms
 	================================================== 
 	================================================== */
+
+
+	// Dates
+	$( ".datepicker" ).datepicker({ 
+		defaultDate: +7,
+		autoSize: true,
+		appendText: '(dd-mm-yyyy)',
+		dateFormat: 'dd-mm-yy',
+	});	
+
+	//===== Masked input =====//
+	
+	//$.mask.definitions['~'] = "[+-]";
+	$(".maskPhone").mask("(999) 999-9999");
+
+
+	// Reload Uniform
+	$("select, input:checkbox, input:radio, input:file").uniform();
 
 
 }
