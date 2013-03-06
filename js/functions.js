@@ -109,7 +109,7 @@ function appStart () {
 				// Borra la nota
 				var noteId = $("#noteToDelete").val();
 				var clientId = $("#noteClientIdToDelete").val();
-				$.post("/components/notes.cfc?method=noteDelete", {noteId:noteId});
+				$.post("/components/notes/notes.cfc?method=noteDelete", {noteId:noteId});
 
 				//Cierra el dialogo
 				$( this ).dialog( "close" );
@@ -130,6 +130,7 @@ function appStart () {
 
 			
 	// Generate dynamic table
+	
 	oTable = $('.dTable').dataTable({
 		"bJQueryUI": true,
 		"bAutoWidth": false,

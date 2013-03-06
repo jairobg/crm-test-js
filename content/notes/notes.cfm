@@ -1,9 +1,9 @@
 <div class="widget" id="noteGrid">
-    <cfinclude template="/content/notesGrid.cfm" />
+    <cfinclude template="notesGrid.cfm" />
 </div>
 
 <div id="noteForm">
-    <cfinclude template="/content/notesAdd.cfm" />
+    <cfinclude template="notesAdd.cfm" />
 </div>
 
 

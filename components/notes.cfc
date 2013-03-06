@@ -11,7 +11,7 @@
 		<cfquery datasource="#APPLICATION.db#" name="noteGetAllQuery">
 			SELECT * FROM notes
 			WHERE
-				clientId = <cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.clientId#" />
+				noteClientId = <cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.clientId#" />
 		</cfquery>
 
 		<cfreturn noteGetAllQuery />
@@ -31,7 +31,7 @@
 		<cfquery name="noteAddQuery" datasource="#APPLICATION.db#">
 			INSERT INTO notes
 			(
-				clientId,
+				noteClientId,
 				noteTitle,
 				noteDescription
 			)
