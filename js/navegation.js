@@ -91,7 +91,10 @@ function clientSelect(clientId)
 	fPrincipalContent('client');
 }
 
-
+function prueba()
+{
+	alert(test);
+}
 
 
 // ------------------------------------------------------------------------------
