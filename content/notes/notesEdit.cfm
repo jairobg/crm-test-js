@@ -45,7 +45,11 @@
 
             <cfoutput>
 		    <div class="formSubmit">
-                <input type="submit" value="Save changes" class="redB" onClick="noteEdit('#thisNote.clientId#'); return false;" />
+                <input 
+                    class="redB" 
+                    onClick="noteEdit('#thisNote.clientId#'); return false;"
+                    type="submit" 
+                    value="Save changes" />
             </div>
             </cfoutput>
 

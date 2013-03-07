@@ -1,5 +1,8 @@
 // ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // General
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 function fPrincipalContent(goTo)
 {
@@ -18,7 +21,7 @@ function fPrincipalContent(goTo)
 			break;
 
 		case 'legalMatters':
-			$("#principalContent").load("content/legalMatters/legalMatters.cfm", appStart);
+			$("#principalContent").load("content/legalMatters/legalMatters.cfm?clientId="+clientId, appStart);
 			break;
 
 		case 'activities':
@@ -64,13 +67,16 @@ function hideLeftBar()
 }
 
 // ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 // Clients
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 function clientEdit()
 {
 	if($("#clientEditForm").validationEngine('validate'))
 	{
-		ColdFusion.Ajax.submitForm('clientEditForm','/components/clients/clients.cfc?method=clientEdit');
+		ColdFusion.Ajax.submitForm('clientEditForm','/components/clients.cfc?method=clientEdit');
     }
 }
 
@@ -86,8 +92,93 @@ function clientSelect(clientId)
 }
 
 
+
+
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+// Legal Matters
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+function legalMatterLoadGrid(clientId)
+{
+	// Regarga el grid
+	$("#legalMatterGrid").load("content/legalMatters/legalMattersGrid.cfm?clientId="+clientId, appStart);
+	// Scrool hasta el grid
+	$('html,body').animate({scrollTop: $('#legalMatterGrid').offset().top}, 500);
+}
+
+function legalMatterLoadForm(clientId)
+{
+	$("#legalMatterForm").load("content/legalMatters/legalMatterAdd.cfm?clientId="+clientId, appStart);
+}
+
+function legalMatterAdd(clientId)
+{
+	if($("#legalMatterAddForm").validationEngine('validate'))
+	{
+		ColdFusion.Ajax.submitForm('legalMatterAddForm','/components/legalMatters.cfc?method=legalMatterAdd');
+		// Recarga new note para no dejar el formulario con datos
+		legalMatterLoadForm(clientId);
+		// Recarga el grid
+		legalMatterLoadGrid(clientId);
+    }
+}
+
+function legalMatterDelete(legalMatterId,clientId)
+{
+
+	$( "#dialog-message" ).dialog({
+		autoOpen: false,
+		modal: true,
+		buttons: {
+			Ok: function() {
+				$.post("/components/legalMatters.cfc?method=legalMatterDelete", {legalMatterId:legalMatterId});
+
+				//Cierra el dialogo
+				$( this ).dialog( "close" );
+
+				//Recarga el grid
+				legalMatterLoadGrid(clientId);
+			},
+			Cancel: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	});
+
+	//Crea el contenido del cuadro de dialogo.
+	var legalMatterDeleteHTML = '<img src="images/icons/notifications/error.png" alt="" class="icon"><p><strong>WARNING: </strong>Are you sure you want to delete this leggal Matter</p>';
+	$("#dialog-message").html(legalMatterDeleteHTML);
+
+	//Abre el cuadro del dialogo y el borrado en la db se llama desde alla
+	$("#dialog-message").dialog("open");
+}
+
+function legalMatterEdit(clientId)
+{
+	if($("#legalMatterEditForm").validationEngine('validate'))
+	{
+		ColdFusion.Ajax.submitForm('legalMatterEditForm','/components/legalMatters.cfc?method=legalMatterEdit');
+    }
+	//Recarga el grid
+	legalMatterLoadGrid(clientId);
+	//Recarga el formulario
+	legalMatterLoadForm(clientId);
+}
+
+function legalMatterToEdit(legalMatterId)
+{
+	$("#legalMatterForm").load("content/legalMatters/legalMattersEdit.cfm?legalMatterId="+legalMatterId);
+	$('html,body').animate({scrollTop: $('#legalMatterForm').offset().top}, 500);
+}
+
+
+// ------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------
 // Notes
+// ------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 function noteLoadGrid(clientId)
 {
@@ -98,14 +189,14 @@ function noteAdd(clientId)
 {
 	if($("#noteAddForm").validationEngine('validate'))
 	{
-		ColdFusion.Ajax.submitForm('noteAddForm','/components/notes/notes.cfc?method=noteAdd');
+		ColdFusion.Ajax.submitForm('noteAddForm','/components/notes.cfc?method=noteAdd');
+		//Recarga new note para el formulario
+		$("#noteForm").load("content/notes/notesAdd.cfm?clientId="+clientId);
+		// Scrool hasta el grid
+		$('html,body').animate({scrollTop: $('#noteGrid').offset().top}, 500);
+		//Recarga el grid
+		noteLoadGrid(clientId);
     }
-	//Recarga new note para el formulario
-	$("#noteForm").load("content/notes/notesAdd.cfm?clientId="+clientId);
-	// Scrool hasta el grid
-	$('html,body').animate({scrollTop: $('#noteGrid').offset().top}, 500);
-	//Recarga el grid
-	noteLoadGrid(clientId);
 }
 
 function noteToEdit(noteId)

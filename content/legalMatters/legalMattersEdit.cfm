@@ -1,21 +1,15 @@
 <cfinvoke component="components.legalMattersStatus" method="legalMatterStatusGetAll" returnvariable="legalMatterStatusGetAllQuery" />
 <cfinvoke component="components.usStates" method="usStatesGet" returnvariable="usStates" />
+<cfinvoke component="components.legalMatters" method="legalMatterGet" returnvariable="legalMatterGetQuery">
+    <cfinvokeargument name="legalMatterId" value="#URL.legalMatterId#" />
+</cfinvoke>
 
-<form class="form" action="" id="legalMatterAddForm">
-
-    <cfoutput>
-        <input
-             id="clientId" 
-             name="clientId" 
-             type="hidden" 
-             value="#URL.clientId#">
-    </cfoutput>
-	
+<cfoutput>
+<form class="form" action="" id="legalMatterEditForm">
     <fieldset>
 		<div class="widget">
-
 			<div class="title">
-				<img src="images/icons/dark/list.png" alt="" class="titleIcon" /><h6>New Legal Matter</h6>
+				<img src="images/icons/dark/list.png" alt="" class="titleIcon" /><h6>Edit Legal Matter</h6>
 			</div>
 
 			<div class="formRow fluid">
@@ -50,21 +44,27 @@
                             id="legalMatterPlantiff"
                             name="legalMatterPlantiff"
                     		placeholder="Plantiff"
-                    		type="text" />
+                    		type="text" 
+                            value="#legalMatterGetQuery.legalMatterPlantiff#" />
                     </span>
                     <span class="span3">
                     	<input 
                             id="legalMatterDefender"
                             name="legalMatterDefender"
                     		placeholder="Defender"
-                    		type="text" />
+                    		type="text" 
+                            value="#legalMatterGetQuery.legalMatterDefender#" />
                     </span>
                     <span class="span3">
                     	<select id="legalMatterStatusId" name="legalMatterStatusId">
 							<option value="0" selected="selected">Select Status</option> 
-                    		<cfoutput query="legalMatterStatusGetAllQuery">
-                    			<option value="#legalMatterStatusId#">#legalMatterStatusName#</option> 
-                    		</cfoutput> 
+                    		<cfloop query="legalMatterStatusGetAllQuery">
+                                <cfif legalMatterGetQuery.legalMatterStatusId EQ legalMatterStatusGetAllQuery.legalMatterStatusId>
+                                    <option value="#legalMatterStatusId#" selected="selected">#legalMatterStatusName#</option>
+                                <cfelse>
+                                    <option value="#legalMatterStatusId#">#legalMatterStatusName#</option> 
+                                </cfif>
+                    		</cfloop> 
 						</select>
                     </span>
                     <span class="span3">
@@ -72,7 +72,8 @@
                             id="legalMatterRef"
                             name="legalMatterRef"
                     		placeholder="Ref"
-                    		type="text" />
+                    		type="text" 
+                            value="#legalMatterGetQuery.legalMatterRef#"/>
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -82,7 +83,8 @@
                             id="legalMatterOpenDate" 
                             name="legalMatterOpenDate" 
                     		placeholder="Open Date"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOpenDate#" />
                     </span>
                     <span class="span6">
                     	<input
@@ -90,7 +92,8 @@
                             id="legalMatterCloseDate"
                             name="legalMatterCloseDate"
 	                    	placeholder="Close Date"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterCloseDate#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -98,7 +101,7 @@
                     	<textarea 
                             id="legalMatterDescription"
                             name="legalMatterDescription"
-                    		placeholder="Description"></textarea>
+                    		placeholder="Description">#legalMatterGetQuery.legalMatterDescription#</textarea>
                     </span>
                 </div>
             </div>
@@ -112,14 +115,16 @@
                             id="legalMatterOCName"
                             name="legalMatterOCName"
                     		placeholder="Name"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCName#" />
                     </span>
                     <span class="span6">
                     	<input 
                             id="legalMatterOCLawFirm"
                             name="legalMatterOCLawFirm"
                     		type="text" 
-                    		placeholder="Law Firm" />
+                    		placeholder="Law Firm"
+                            value="#legalMatterGetQuery.legalMatterOCLawFirm#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -128,28 +133,32 @@
                             id="legalMatterOCJurisdiction"
                             name="legalMatterOCJurisdiction"
                     		placeholder="Jurisdiction"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCJurisdiction#" />
                     </span>
                     <span class="span4">
                     	<input 
                             id="legalMatterOCEmail"
                             name="legalMatterOCEmail"
                     		placeholder="E-mail"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCEmail#" />
                     </span>
                     <span class="span2">
                     	<input 
                             id="legalMatterOCPhone"
                             name="legalMatterOCPhone"
                     		placeholder="Phone"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCPhone#" />
                     </span>
                     <span class="span2">
                     	<input 
                             id="legalMatterOCFax"
                             name="legalMatterOCFax"
                     		placeholder="Fax"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCFax#" />
                     </span>
                 </div>
                 <div class="formRight mt12">
@@ -158,22 +167,30 @@
                             id="legalMatterOCAddress"
                             name="legalMatterOCAddress"
                     		placeholder="Address"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCAddress#" />
                     </span>
                     <span class="span2">
                     	<input 
                             id="legalMatterOCCity"
                             name="legalMatterOCCity"
                     		placeholder="City"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCCity#" />
                     </span>
                     <span class="span4">
 						<select id="legalMatterOCUsState" name="legalMatterOCUsState"> 
 							<option value="" selected="selected">Select a State</option> 
 							<cfloop query="usStates">
-								<option value="#usStates.abbreviation#">
-                                    #usStates.name#
-                                </option>
+                                <cfif legalMatterGetQuery.legalMatterOCUsState EQ usStates.abbreviation>
+                                    <option value="#usStates.abbreviation#" selected="selected">
+                                        #usStates.name#
+                                    </option>                                
+                                <cfelse>    
+                                    <option value="#usStates.abbreviation#">
+                                        #usStates.name#
+                                    </option>
+                                </cfif>
 							</cfloop>
 						</select>         
                     </span>
@@ -182,7 +199,8 @@
                             id="legalMatterOCZip"
                             name="legalMatterOCZip"
                     		placeholder="Zip"
-                    		type="text" />
+                    		type="text"
+                            value="#legalMatterGetQuery.legalMatterOCZip#" />
                     </span>
                 </div>
             </div>
@@ -191,7 +209,7 @@
             <div class="formSubmit">
                 <input 
                     class="redB" 
-                    onClick="legalMatterAdd(#URL.clientId#); return false;"
+                    onClick="legalMatterAdd(#legalMatterGetQuery.legalMatterId#); return false;"
                     type="submit" 
                     value="Save" />
             </div>
@@ -200,3 +218,4 @@
         </div>
     </fieldset>
 </form>
+</cfoutput>

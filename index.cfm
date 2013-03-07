@@ -205,14 +205,10 @@
     <!--- 
         Popup -Loader "Animacion de loader"
     --->
-    <!---
     <div class="uDialog">
         <div id="dialog-message" title="Saving">
-            <br>
-            <p><center><img src="images/loaders/loader9.gif" alt="" style="margin: 5px;"></center></p>
         </div>
     </div>
-    --->
 
 
 
