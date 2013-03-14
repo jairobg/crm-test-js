@@ -2,16 +2,47 @@
 	
 	<cffunction 
 		access="remote"
-		description="Update legal matter, table legalMatters"
-		name="legalMatterEdit" 
+		description="Update property, table properties"
+		name="propertiesEdit" 
 		returntype="Any">
 
-		<cfargument name="legalMatterId" required="true">
+		<cfargument name="propertyId" required="true">
 
-		<cfquery datasource="#APPLICATION.db#" name="legalMatterEditQuery">
+		<cfquery datasource="#APPLICATION.db#" name="propertiesEditQuery">
 			UPDATE 
-				legalMatters
+				properties
 			SET
+
+				propertyAddress = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyAddress#" />,
+				propertyCity = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyCity#" />,
+				propertyUsState = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyUsState#" />,
+				propertyZip = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyZip#" />,
+				propertyAppliedLMWY = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyAppliedLMWY#" />,
+				
+				propertyAppliedLM = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyAppliedLM#" />,
+				
+				propertyDefaultedHALMPMHA = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyDefaultedHALMPMHA#" />,
+				propertyDefaultedHAMPIHLM = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyDefaultedHAMPIHLM#" />,
+				propertyMonthlyRetainer = <cfqueryparam cfsqltype="cf_sql_float" value="#ARGUMENTS.propertyMonthlyRetainer#" />,
+				propertyFMMorgageCompany = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMMorgageCompany#" />,
+				propertyFMLoanNumber = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMLoanNumber#" />,
+				propertyFMPrincipalBalanceOwed = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMPrincipalBalanceOwed#" />,
+				propertyFMMonthlyPayment = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMMonthlyPayment#" />,
+				propertyFMInterestRate = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMInterestRate#" />,
+				propertyFMTI = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMTI#" />,
+				propertyFMPaymentsBehind = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMPaymentsBehind#" />,
+				propertyFMDateLoanOpened = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMDateLoanOpened#" />,
+				propertyFMDateLastPayment = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertyFMDateLastPayment#" />,
+				propertySMMorgageCompany = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMMorgageCompany#" />,
+				propertySMLoanNumber = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMLoanNumber#" />,
+				propertySMPrincipalBalanceOwed = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMPrincipalBalanceOwed#" />,
+				propertySMMonthlyPayment = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMMonthlyPayment#" />,
+				propertySMInterestRate = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMInterestRate#" />,
+				propertySMTI = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMTI#" />,
+				propertySMPaymentsBehind = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMPaymentsBehind#" />,
+				propertySMDateLoanOpened = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMDateLoanOpened#" />,
+				propertySMDateLastPayment = <cfqueryparam cfsqltype="CF_SQL_VARCHAR" value="#ARGUMENTS.propertySMDateLastPayment#" />,
+
 				<cfif ARGUMENTS.creditorId EQ "">
 					creditorId = NULL,
 				<cfelse>
@@ -137,20 +168,20 @@
 
 	<cffunction 
 		access="public"
-		description="Get all legal matter for given clientId, table legalMatters" 
-		name="legalMatterGetAll" 
+		description="Get all properties for given clientId, table properties" 
+		name="propertiesGetAllPerClient" 
 		returntype="query">
 		
 		<cfargument name="clientId" required="true">
 
-		<cfquery datasource="#APPLICATION.db#" name="legalMatterGetAllQuery">
+		<cfquery datasource="#APPLICATION.db#" name="propertiesGetAllPerClientQuery">
 			SELECT *
-			FROM legalMatters
+			FROM properties
 			WHERE
 				clientId = <cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.clientId#" />
 		</cfquery>
 
-		<cfreturn legalMatterGetAllQuery />
+		<cfreturn propertiesGetAllPerClientQuery />
 
 	</cffunction>
 

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"le",
+				"legalMatterForm"
+			],
+			[
+				"lega",
+				"legalMatterForm"
+			],
+			[
 				"legalMatter",
 				"legalMatterAdd"
 			],
@@ -284,42 +292,18 @@
 	"buffers":
 	[
 		{
-			"file": "content/legalMatters/legalMatters.cfm",
+			"file": "js/navegation.js",
 			"settings":
 			{
-				"buffer_size": 543,
+				"buffer_size": 6787,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "content/legalMatters/legalMattersAdd.cfm",
+			"file": "index.cfm",
 			"settings":
 			{
-				"buffer_size": 6509,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/legalMatters/legalMattersGrid.cfm",
-			"settings":
-			{
-				"buffer_size": 1540,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/legalMattersStatus.cfc",
-			"settings":
-			{
-				"buffer_size": 384,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/clients/clientsEdit.cfm",
-			"settings":
-			{
-				"buffer_size": 10921,
+				"buffer_size": 10640,
 				"line_ending": "Unix"
 			}
 		},
@@ -327,31 +311,23 @@
 			"file": "components/legalMatters.cfc",
 			"settings":
 			{
-				"buffer_size": 6189,
+				"buffer_size": 7477,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/navegation.js",
+			"file": "content/legalMatters/legalMattersEdit.cfm",
 			"settings":
 			{
-				"buffer_size": 5225,
+				"buffer_size": 9732,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "components/notes.cfc",
+			"file": "content/legalMatters/legalMatters.cfm",
 			"settings":
 			{
-				"buffer_size": 2879,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "content/notes/notesAdd.cfm",
-			"settings":
-			{
-				"buffer_size": 1513,
+				"buffer_size": 544,
 				"line_ending": "Unix"
 			}
 		}
@@ -408,13 +384,20 @@
 	},
 	"file_history":
 	[
-		"/Users/jairobotero/Sites/crmlex/components/clients.cfc",
+		"/Users/jairobotero/Sites/crmlex/js/plugins/tables/jquery.dataTables.min.js",
 		"/Users/jairobotero/Sites/crmlex/components/notes.cfc",
-		"/Users/jairobotero/Sites/crmlex/content/notes/notesAdd.cfm",
-		"/Users/jairobotero/Sites/crmlex/js/functions.js",
-		"/Users/jairobotero/Sites/crmlex/js/navegation.js",
-		"/Users/jairobotero/Sites/crmlex/content/notes/notes.cfm",
 		"/Users/jairobotero/Sites/crmlex/content/notes/notesEdit.cfm",
+		"/Users/jairobotero/Sites/crmlex/js/functions.js",
+		"/Users/jairobotero/Sites/crmlex/components/legalMatters.cfc",
+		"/Users/jairobotero/Sites/crmlex/content/legalMatters/legalMatters.cfm",
+		"/Users/jairobotero/Sites/crmlex/content/legalMatters/legalMattersGrid.cfm",
+		"/Users/jairobotero/Sites/crmlex/content/notes/notes.cfm",
+		"/Users/jairobotero/Sites/crmlex/content/legalMatters/legalMattersAdd.cfm",
+		"/Users/jairobotero/Sites/crmlex/content/notes/notesAdd.cfm",
+		"/Users/jairobotero/Sites/crmlex/js/navegation.js",
+		"/Users/jairobotero/Sites/crmlex/content/clients/clientsEdit.cfm",
+		"/Users/jairobotero/Sites/crmlex/components/legalMattersStatus.cfc",
+		"/Users/jairobotero/Sites/crmlex/components/clients.cfc",
 		"/Users/jairobotero/Sites/crmlex/content/notes/notesGrid.cfm",
 		"/Users/jairobotero/Sites/crmlex/index.cfm",
 		"/Users/jairobotero/Sites/crmlex/content/dashboard.cfm",
@@ -528,14 +511,7 @@
 		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/documents/DISCLAIMER-CRM.htm",
 		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/login.cfc",
 		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/archive.cfc",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/template/footer.cfm",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/menuDocuments.cfm",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/fileEditForm.cfm",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/Application.cfm",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/generateLetters.cfm",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/letters.cfc",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/template/header.cfm",
-		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/components/task.cfc"
+		"/Users/jairobotero/Documents/nyxent/credit-defender/dev-pt/www/template/footer.cfm"
 	],
 	"find":
 	{
@@ -554,6 +530,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"bind",
+			"URL",
 			"#FORM.",
 			"clientId",
 			"datepicker",
@@ -679,9 +657,7 @@
 			"assignedToAffiliate",
 			"affiliateCompanyId",
 			"assignedToAffiliate",
-			"affiliatecompanyemployee",
-			"addNewFile",
-			"all files addNewFile"
+			"affiliatecompanyemployee"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -730,202 +706,23 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "content/legalMatters/legalMatters.cfm",
-					"settings":
-					{
-						"buffer_size": 543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								99,
-								99
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "content/legalMatters/legalMattersAdd.cfm",
-					"settings":
-					{
-						"buffer_size": 6509,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6405,
-								6405
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1072.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "content/legalMatters/legalMattersGrid.cfm",
-					"settings":
-					{
-						"buffer_size": 1540,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1348,
-								1348
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "components/legalMattersStatus.cfc",
-					"settings":
-					{
-						"buffer_size": 384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								285,
-								285
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "content/clients/clientsEdit.cfm",
-					"settings":
-					{
-						"buffer_size": 10921,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10810,
-								10848
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3627.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "components/legalMatters.cfc",
-					"settings":
-					{
-						"buffer_size": 6189,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6154,
-								6154
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1689.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "js/navegation.js",
 					"settings":
 					{
-						"buffer_size": 5225,
+						"buffer_size": 6787,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3101,
-								2850
+								2183,
+								2183
 							]
 						],
 						"settings":
@@ -937,55 +734,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1802.0,
+						"translation.y": 941.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "components/notes.cfc",
+					"buffer": 1,
+					"file": "index.cfm",
 					"settings":
 					{
-						"buffer_size": 2879,
+						"buffer_size": 10640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/ColdFusion/ColdFusionCFC.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "content/notes/notesAdd.cfm",
-					"settings":
-					{
-						"buffer_size": 1513,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								10411,
+								10411
 							]
 						],
 						"settings":
@@ -998,7 +765,97 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 3301.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "components/legalMatters.cfc",
+					"settings":
+					{
+						"buffer_size": 7477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7423,
+								7442
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ColdFusion/ColdFusionCFC.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 754.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "content/legalMatters/legalMattersEdit.cfm",
+					"settings":
+					{
+						"buffer_size": 9732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9548,
+								9548
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1583.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "content/legalMatters/legalMatters.cfm",
+					"settings":
+					{
+						"buffer_size": 544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

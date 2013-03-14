@@ -134,6 +134,7 @@ function appStart () {
 	oTable = $('.dTable').dataTable({
 		"bJQueryUI": true,
 		"bAutoWidth": false,
+		"bDestroy": true,
 		"sPaginationType": "full_numbers",
 		"sDom": '<"itemsPerPage"fl>t<"F"ip>',
 		"oLanguage": {
@@ -141,8 +142,6 @@ function appStart () {
 			"sSearch": "<span>Search:</span> _INPUT_ <i class='srch'></i>"
 		}
 	});
-	oTable.fnDraw
-	
 
 
 	/* Forms

@@ -6,6 +6,16 @@
 
 <cfoutput>
 <form class="form" action="" id="legalMatterEditForm">
+
+    <input
+        name="legalMatterId"
+        type="hidden"
+        value="#legalMatterGetQuery.legalMatterId#" />
+    <input
+        name="clientId"
+        type="hidden"
+        value="#legalMatterGetQuery.clientId#" />
+
     <fieldset>
 		<div class="widget">
 			<div class="title">
@@ -209,7 +219,7 @@
             <div class="formSubmit">
                 <input 
                     class="redB" 
-                    onClick="legalMatterAdd(#legalMatterGetQuery.legalMatterId#); return false;"
+                    onClick="legalMatterEdit(#legalMatterGetQuery.clientId#); return false;"
                     type="submit" 
                     value="Save" />
             </div>
